@@ -498,7 +498,7 @@ class adLDAPUsers {
     public function encodePassword($password) {
         $password="\"".$password."\"";
         $encoded="";
-        for ($i=0; $i <strlen($password); $i++) { $encoded.="{$password{$i}}\000"; }
+        for ($i=0; $i <strlen($password); $i++) { $encoded.="{$password[$i]}\000"; }
         return $encoded;
     }
      
